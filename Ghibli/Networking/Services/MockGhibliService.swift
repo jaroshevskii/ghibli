@@ -38,6 +38,7 @@ struct MockGhibliService: GhibliService {
     return data.films
   }
   
+  /// Only for preview or testing.
   func fetchFilm() -> Film {
     let data = try! loadSampleData()
     return data.films.first!

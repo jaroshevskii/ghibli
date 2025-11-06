@@ -10,7 +10,7 @@ import Observation
 
 @Observable
 final class FilmsViewModel {
-  enum State {
+  enum State: Equatable {
     case idle, loading, loaded([Film]), error(String)
   }
   

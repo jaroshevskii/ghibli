@@ -9,8 +9,13 @@ import Foundation
 import Observation
 import Playgrounds
 
+@Observable
 final class FilmDetailViewModel {
-  var people: [Person] = []
+  enum State: Equatable {
+    case idle, loading, loaded([Person]), error(String)
+  }
+  
+  private(set) var state = State.idle
   
   private let service: GhibliService
   
@@ -19,28 +24,48 @@ final class FilmDetailViewModel {
   }
   
   func fetch(for film: Film) async {
+    guard state != .loading else { return }
+    state = .loading
     do {
-      try await withThrowingTaskGroup(of: Person.self) { group in
-        for personInfoURL in film.people {
+      let people = try await withThrowingTaskGroup(of: (Int, Person).self) { group in
+        for (index, personInfoURL) in film.people.enumerated() {
           group.addTask {
-            print("start fetch for \(personInfoURL)")
             let person = try await self.service.fetchPerson(from: personInfoURL)
-            print("finished fetch for \(personInfoURL)")
-            return person
+            return (index, person)
           }
         }
-        for try await person in group {
-          people.append(person)
+        
+        var results: [(Int, Person)] = []
+        for try await result in group {
+          results.append(result)
         }
+        
+        return results.sorted { $0.0 < $1.0 }.map { $0.1 }
       }
+      state = .loaded(people)
+    } catch let error as APIError {
+      state = .error(error.errorDescription ?? "Unknown error")
     } catch {
-      
+      state = .error("Unknown error")
     }
   }
 }
 
 #Playground {
-  let vm = FilmDetailViewModel()
-  let film = MockGhibliService().fetchFilm()
+  let service = MockGhibliService()
+  let vm = FilmDetailViewModel(service: service)
+  let film = service.fetchFilm()
   await vm.fetch(for: film)
+  switch vm.state {
+  case .idle:
+    print("Idle")
+  case .loading:
+    print("Loading...")
+  case .loaded(let people):
+    for person in people {
+      print(person)
+    }
+  case .error(let message):
+    print("Error: \(message)")
+  }
 }

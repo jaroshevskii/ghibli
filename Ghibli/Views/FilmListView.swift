@@ -21,7 +21,16 @@ struct FilmListView: View {
         }
       case let .loaded(films):
         List(films) { film in
-          Text(film.title)
+          NavigationLink(value: film) {
+            HStack {
+              FilmImageView(urlPath: film.image)
+                .frame(width: 100, height: 150)
+              Text(film.title)
+            }
+          }
+        }
+        .navigationDestination(for: Film.self) { film in
+          FilmDetailView(film: film)
         }
       case let .error(error):
         Text(error)
