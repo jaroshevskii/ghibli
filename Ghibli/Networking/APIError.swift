@@ -1,21 +1,29 @@
 //
 //  APIError.swift
-//  Ghibli
+//  GhibliSwiftUIApp
 //
-//  Created by Sasha Jaroshevskii on 10/29/25.
+//  Created by Karin Prater on 10/7/25.
 //
+
 
 import Foundation
 
 enum APIError: LocalizedError {
-  case invalidURL, invalidResponse, decoding(Error), network(Error)
-  
-  var errorDescription: String? {
-    switch self {
-    case .invalidURL: "The URL is invalid"
-    case .invalidResponse: "Invalid response from server"
-    case .decoding(let error): "Failed to decode response: \(error.localizedDescription)"
-    case .network(let error): "Network error: \(error.localizedDescription)"
+    case invalideURL
+    case invalidResponse
+    case decoding(Error)
+    case networkError(Error)
+    
+    var errorDescription: String? {
+        switch self {
+            case .invalideURL:
+                return "The URL is invalid"
+            case .invalidResponse:
+                return "Invalid response from server"
+            case .decoding(let error):
+                return "Failed to decode response: \(error.localizedDescription)"
+            case .networkError(let error):
+               return "Network error: \(error.localizedDescription)"
+        }
     }
-  }
 }

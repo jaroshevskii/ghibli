@@ -8,45 +8,55 @@
 import SwiftUI
 
 struct FilmImageView: View {
-  private let imageURL: URL?
-  
-  init(urlPath: String) {
-    self.imageURL = URL(string: urlPath)
-  }
-  
-  init(url: URL?) {
-    self.imageURL = url
-  }
-  
-  var body: some View {
-    AsyncImage(url: imageURL) { phase in
-      switch phase {
-      case .empty:
-        Color(white: 0.8)
-          .overlay {
-            ProgressView()
-          }
-      case let .success(image):
-        image
-          .resizable()
-          .scaledToFill()
-      case .failure:
-        Text("Could not get image")
-      @unknown default:
-        EmptyView()
-      }
+    
+    let url: URL?
+    
+    init(urlPath: String) {
+        self.url = URL(string: urlPath)
     }
-  }
+    
+    init(url: URL?) {
+        self.url = url
+    }
+    
+    var body: some View {
+        AsyncImage(url: url) { phase in
+            switch phase {
+                case .empty:
+                    Color(white: 0.8)
+                        .overlay {
+                            ProgressView()
+                                .controlSize(.large)
+                        }
+                case .success(let image):
+                    image
+                        .resizable()
+                        .scaledToFill()
+                        .clipped()
+                case .failure(_):
+                    Text("Could not get image")
+                @unknown default:
+                    fatalError()
+            }
+        }
+       
+    }
 }
 
-#Preview("Poster") {
-  let url = AssetExtractor.createLocalUrl(forImageNamed: "FilmPoster")
-  FilmImageView(url: url)
-    .frame(height: 150)
+#Preview("poster image") {
+     FilmImageView(url: URL.convertAssetImage(named: "posterImage"))
+        .frame(height: 150)
 }
 
-#Preview("Banner") {
-  let url = AssetExtractor.createLocalUrl(forImageNamed: "FilmBanner")
-  FilmImageView(url: url)
-    .frame(height: 200)
+#Preview("banner image") {
+    
+    let name = "bannerImage"
+    let url = URL.convertAssetImage(named: name)
+    
+   // FilmImageView(urlPath: "https://image.tmdb.org/t/p/w533_and_h300_bestv2/3cyjYtLWCBE1uvWINHFsFnE8LUK.jpg")
+    FilmImageView(url: url)
+        .frame(height: 300)
+    
 }
+
+

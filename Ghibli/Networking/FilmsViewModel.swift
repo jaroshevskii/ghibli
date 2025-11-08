@@ -9,26 +9,38 @@ import Foundation
 import Observation
 
 @Observable
-final class FilmsViewModel {
-  var state = LoadingState<[Film]>.idle
-  
-  var films: [Film] = []
-  
-  private let service: GhibliService
-  
-  init(service: GhibliService = DefaultGhibliService()) {
-    self.service = service
-  }
-  
-  func fetch() async {
-    guard case .idle = state else { return }
-    state = .loading
-    do {
-      state = .success(try await service.fetchFilms())
-    } catch let error as APIError {
-      state = .error(error.errorDescription ?? "Unknown error")
-    } catch {
-      state = .error("Unknown error")
+class FilmsViewModel {
+
+    var state: LoadingState<[Film]> = .idle
+    
+    private let service: GhibliService
+    
+    init(service: GhibliService = DefaultGhibliService()) {
+        self.service = service
     }
-  }
+    
+    func fetch() async {
+        guard !state.isLoading || state.error != nil else { return }
+        
+        state = .loading
+        
+        do {
+            let films = try await service.fetchFilms()
+            self.state = .loaded(films)
+        } catch let error as APIError {
+            self.state = .error(error.errorDescription ?? "unknown error")
+        } catch {
+            self.state = .error("unknown error")
+        }
+    }
+    
+    
+// MARK: - Preview
+    
+    static var example: FilmsViewModel {
+        let vm = FilmsViewModel(service: MockGhibliService())
+        vm.state = .loaded([Film.example, Film.exampleFavorite])
+        return vm
+    }
+
 }

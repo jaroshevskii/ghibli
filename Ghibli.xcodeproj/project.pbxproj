@@ -6,10 +6,6 @@
 	objectVersion = 77;
 	objects = {
 
-/* Begin PBXBuildFile section */
-		BBAA19352EBE694E00075CB0 /* FavoriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBAA19342EBE694E00075CB0 /* FavoriteButton.swift */; };
-/* End PBXBuildFile section */
-
 /* Begin PBXContainerItemProxy section */
 		BB2F63442EB2B49900BB2FD9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -31,7 +27,6 @@
 		BB2F63362EB2B49700BB2FD9 /* Ghibli.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ghibli.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB2F63432EB2B49900BB2FD9 /* GhibliTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GhibliTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB2F634D2EB2B49900BB2FD9 /* GhibliUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GhibliUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		BBAA19342EBE694E00075CB0 /* FavoriteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -84,7 +79,6 @@
 				BB2F63462EB2B49900BB2FD9 /* GhibliTests */,
 				BB2F63502EB2B49900BB2FD9 /* GhibliUITests */,
 				BB2F63372EB2B49700BB2FD9 /* Products */,
-				BBAA19342EBE694E00075CB0 /* FavoriteButton.swift */,
 			);
 			sourceTree = "<group>";
 		};
@@ -242,7 +236,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BBAA19352EBE694E00075CB0 /* FavoriteButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -404,7 +397,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "Ghibli/PreviewAssets Ghibli/PreviewAssets/SampleData.json";
+				DEVELOPMENT_ASSET_PATHS = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -436,7 +429,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "Ghibli/PreviewAssets Ghibli/PreviewAssets/SampleData.json";
+				DEVELOPMENT_ASSET_PATHS = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;

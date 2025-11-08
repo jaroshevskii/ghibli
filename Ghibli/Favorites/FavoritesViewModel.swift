@@ -9,34 +9,45 @@ import Foundation
 import Observation
 
 @Observable
-final class FavoritesViewModel {
-  private(set) var favoritesIDs = Set<String>()
+class FavoritesViewModel {
+    
+    private(set) var favoriteIDs: Set<String> = []
+    
+    private let service: FavoriteStorage
   
-  private let service: FavoriteStorage
-  
-  init(service: FavoriteStorage = DefaultFavoriteStorage()) {
-    self.service = service
-  }
-
-  func load() {
-    favoritesIDs = service.load()
-  }
-  
-  func save() {
-    service.save(favoriteIDs: favoritesIDs)
-  }
-  
-  func toggleFavorite(filmID: String) {
-    if favoritesIDs.contains(filmID) {
-      favoritesIDs.remove(filmID)
-    } else {
-      favoritesIDs.insert(filmID)
+    init( service: FavoriteStorage = DefaultFavoriteStorage()) {
+        self.service = service
     }
     
-    service.save(favoriteIDs: favoritesIDs)
-  }
-  
-  func isFavorite(filmID: String) -> Bool {
-    favoritesIDs.contains(filmID)
-  }
+    func load() {
+        favoriteIDs = service.load()
+    }
+    
+    private func save() {
+        service.save(favoriteIDs: favoriteIDs)
+    }
+    
+    func toggleFavorite(filmID: String) {
+        if favoriteIDs.contains(filmID) {
+            favoriteIDs.remove(filmID)
+        } else {
+            favoriteIDs.insert(filmID)
+        }
+        
+        save()
+    }
+    
+    
+    func isFavorite(filmID: String) -> Bool {
+        favoriteIDs.contains(filmID)
+    }
+    
+    //MARK: - preview
+    static var example: FavoritesViewModel {
+        let vm = FavoritesViewModel(service: MockFavoriteStorage())
+        vm.favoriteIDs = ["2baf70d1-42bb-4437-b551-e5fed5a87abe"]
+        
+        return vm
+    }
+    
 }

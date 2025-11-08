@@ -9,30 +9,50 @@ import Foundation
 import Observation
 
 @Observable
-final class SearchFilmsViewModel {
-  var state = LoadingState<[Film]>.idle
-  
-  var films: [Film] = []
-  
-  private let service: GhibliService
-  
-  init(service: GhibliService = DefaultGhibliService()) {
-    self.service = service
-  }
-  
-  func fetch(for searchTerm: String) async {
-    try? await Task.sleep(for: .milliseconds(300))
-    guard !Task.isCancelled else { return }
+class SearchFilmsViewModel {
     
-    guard !searchTerm.isEmpty else { return }
+    var state: LoadingState<[Film]> = .idle
+    private var currentSearchTerm: String = ""
     
-    state = .loading
-    do {
-      state = .success(try await service.searchFilms(query: searchTerm))
-    } catch let error as APIError {
-      state = .error(error.errorDescription ?? "Unknown error")
-    } catch {
-      state = .error("Unknown error")
+    private let service: GhibliService
+    
+    init(service: GhibliService = DefaultGhibliService()) {
+        self.service = service
     }
-  }
+    
+    func fetch(for searchTerm: String) async {
+        
+        self.currentSearchTerm = searchTerm
+        
+        guard !searchTerm.isEmpty else {
+            state = .idle
+            return
+        }
+        
+        state = .loading
+        
+        try? await Task.sleep(for: .milliseconds(500))
+        guard !Task.isCancelled else { return }
+        
+        do {
+            let films = try await service.searchFilm(for: searchTerm)
+            self.state = .loaded(films)
+        } catch {
+            setError(error, for: searchTerm)
+        }
+    }
+    
+    func setError(_ error: Error, for searchTerm: String) {
+        
+        guard currentSearchTerm == searchTerm else { return }
+        
+        if let error = error as? APIError {
+            self.state = .error(error.errorDescription ?? "unknown error")
+        } else {
+            self.state = .error("unknown error")
+        }
+        
+    }
+    
 }
+

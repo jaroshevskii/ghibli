@@ -1,14 +1,16 @@
 //
-//  GhibliService.swift
-//  Ghibli
+//  File.swift
+//  GhibliSwiftUIApp
 //
-//  Created by Sasha Jaroshevskii on 10/29/25.
+//  Created by Karin Prater on 10/6/25.
 //
 
 import Foundation
 
+
 protocol GhibliService: Sendable {
-  func fetchFilms() async throws -> [Film]
-  func fetchPerson(from urlString: String) async throws -> Person
-  func searchFilms(query: String) async throws -> [Film]
+    func fetchFilms() async throws -> [Film]
+    func fetchPerson(from URLString: String) async throws -> Person
+    
+    func searchFilm(for searchTerm: String) async throws -> [Film]
 }
