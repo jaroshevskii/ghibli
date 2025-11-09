@@ -7,45 +7,49 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BBB059C12EC0BE0D00B4DEF4 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = BBB059C02EC0BE0D00B4DEF4 /* ComposableArchitecture */; };
-		BBB059C92EC0C04700B4DEF4 /* Tagged in Frameworks */ = {isa = PBXBuildFile; productRef = BBB059C82EC0C04700B4DEF4 /* Tagged */; };
+		BB82A3E22EC1038700BD1D17 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = BB82A3E12EC1038700BD1D17 /* ComposableArchitecture */; };
+		BB82A3E52EC1039E00BD1D17 /* Tagged in Frameworks */ = {isa = PBXBuildFile; productRef = BB82A3E42EC1039E00BD1D17 /* Tagged */; };
+		BB82A3F02EC105FE00BD1D17 /* .editorconfig in Resources */ = {isa = PBXBuildFile; fileRef = BB82A3EF2EC105FE00BD1D17 /* .editorconfig */; };
+		BB82A41D2EC10BB700BD1D17 /* NukeUI in Frameworks */ = {isa = PBXBuildFile; productRef = BB82A41C2EC10BB700BD1D17 /* NukeUI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		BB2F63442EB2B49900BB2FD9 /* PBXContainerItemProxy */ = {
+		BB82A3652EC1018000BD1D17 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = BB2F632E2EB2B49700BB2FD9 /* Project object */;
+			containerPortal = BB82A34F2EC1017F00BD1D17 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = BB2F63352EB2B49700BB2FD9;
+			remoteGlobalIDString = BB82A3562EC1017F00BD1D17;
 			remoteInfo = Ghibli;
 		};
-		BB2F634E2EB2B49900BB2FD9 /* PBXContainerItemProxy */ = {
+		BB82A36F2EC1018000BD1D17 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = BB2F632E2EB2B49700BB2FD9 /* Project object */;
+			containerPortal = BB82A34F2EC1017F00BD1D17 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = BB2F63352EB2B49700BB2FD9;
+			remoteGlobalIDString = BB82A3562EC1017F00BD1D17;
 			remoteInfo = Ghibli;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		BB2F63362EB2B49700BB2FD9 /* Ghibli.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ghibli.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		BB2F63432EB2B49900BB2FD9 /* GhibliTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GhibliTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		BB2F634D2EB2B49900BB2FD9 /* GhibliUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GhibliUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB82A3572EC1017F00BD1D17 /* Ghibli.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ghibli.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB82A3642EC1018000BD1D17 /* GhibliTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GhibliTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB82A36E2EC1018000BD1D17 /* GhibliUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GhibliUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB82A3EF2EC105FE00BD1D17 /* .editorconfig */ = {isa = PBXFileReference; lastKnownFileType = text; path = .editorconfig; sourceTree = "<group>"; };
+		BB82A4192EC1086000BD1D17 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		BB2F63382EB2B49700BB2FD9 /* Ghibli */ = {
+		BB82A3592EC1017F00BD1D17 /* Ghibli */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = Ghibli;
 			sourceTree = "<group>";
 		};
-		BB2F63462EB2B49900BB2FD9 /* GhibliTests */ = {
+		BB82A3672EC1018000BD1D17 /* GhibliTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = GhibliTests;
 			sourceTree = "<group>";
 		};
-		BB2F63502EB2B49900BB2FD9 /* GhibliUITests */ = {
+		BB82A3712EC1018000BD1D17 /* GhibliUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = GhibliUITests;
 			sourceTree = "<group>";
@@ -53,23 +57,24 @@
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		BB2F63332EB2B49700BB2FD9 /* Frameworks */ = {
+		BB82A3542EC1017F00BD1D17 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BBB059C92EC0C04700B4DEF4 /* Tagged in Frameworks */,
-				BBB059C12EC0BE0D00B4DEF4 /* ComposableArchitecture in Frameworks */,
+				BB82A41D2EC10BB700BD1D17 /* NukeUI in Frameworks */,
+				BB82A3E52EC1039E00BD1D17 /* Tagged in Frameworks */,
+				BB82A3E22EC1038700BD1D17 /* ComposableArchitecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BB2F63402EB2B49900BB2FD9 /* Frameworks */ = {
+		BB82A3612EC1018000BD1D17 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BB2F634A2EB2B49900BB2FD9 /* Frameworks */ = {
+		BB82A36B2EC1018000BD1D17 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -79,22 +84,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		BB2F632D2EB2B49700BB2FD9 = {
+		BB82A34E2EC1017F00BD1D17 = {
 			isa = PBXGroup;
 			children = (
-				BB2F63382EB2B49700BB2FD9 /* Ghibli */,
-				BB2F63462EB2B49900BB2FD9 /* GhibliTests */,
-				BB2F63502EB2B49900BB2FD9 /* GhibliUITests */,
-				BB2F63372EB2B49700BB2FD9 /* Products */,
+				BB82A4192EC1086000BD1D17 /* .gitignore */,
+				BB82A3EF2EC105FE00BD1D17 /* .editorconfig */,
+				BB82A3592EC1017F00BD1D17 /* Ghibli */,
+				BB82A3672EC1018000BD1D17 /* GhibliTests */,
+				BB82A3712EC1018000BD1D17 /* GhibliUITests */,
+				BB82A3582EC1017F00BD1D17 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		BB2F63372EB2B49700BB2FD9 /* Products */ = {
+		BB82A3582EC1017F00BD1D17 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BB2F63362EB2B49700BB2FD9 /* Ghibli.app */,
-				BB2F63432EB2B49900BB2FD9 /* GhibliTests.xctest */,
-				BB2F634D2EB2B49900BB2FD9 /* GhibliUITests.xctest */,
+				BB82A3572EC1017F00BD1D17 /* Ghibli.app */,
+				BB82A3642EC1018000BD1D17 /* GhibliTests.xctest */,
+				BB82A36E2EC1018000BD1D17 /* GhibliUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -102,140 +109,143 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		BB2F63352EB2B49700BB2FD9 /* Ghibli */ = {
+		BB82A3562EC1017F00BD1D17 /* Ghibli */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BB2F63572EB2B49900BB2FD9 /* Build configuration list for PBXNativeTarget "Ghibli" */;
+			buildConfigurationList = BB82A3782EC1018000BD1D17 /* Build configuration list for PBXNativeTarget "Ghibli" */;
 			buildPhases = (
-				BB2F63322EB2B49700BB2FD9 /* Sources */,
-				BB2F63332EB2B49700BB2FD9 /* Frameworks */,
-				BB2F63342EB2B49700BB2FD9 /* Resources */,
+				BB82A3532EC1017F00BD1D17 /* Sources */,
+				BB82A3542EC1017F00BD1D17 /* Frameworks */,
+				BB82A3552EC1017F00BD1D17 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				BB2F63382EB2B49700BB2FD9 /* Ghibli */,
+				BB82A3592EC1017F00BD1D17 /* Ghibli */,
 			);
 			name = Ghibli;
 			packageProductDependencies = (
-				BBB059C02EC0BE0D00B4DEF4 /* ComposableArchitecture */,
-				BBB059C82EC0C04700B4DEF4 /* Tagged */,
+				BB82A3E12EC1038700BD1D17 /* ComposableArchitecture */,
+				BB82A3E42EC1039E00BD1D17 /* Tagged */,
+				BB82A41C2EC10BB700BD1D17 /* NukeUI */,
 			);
 			productName = Ghibli;
-			productReference = BB2F63362EB2B49700BB2FD9 /* Ghibli.app */;
+			productReference = BB82A3572EC1017F00BD1D17 /* Ghibli.app */;
 			productType = "com.apple.product-type.application";
 		};
-		BB2F63422EB2B49900BB2FD9 /* GhibliTests */ = {
+		BB82A3632EC1018000BD1D17 /* GhibliTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BB2F635A2EB2B49900BB2FD9 /* Build configuration list for PBXNativeTarget "GhibliTests" */;
+			buildConfigurationList = BB82A37B2EC1018000BD1D17 /* Build configuration list for PBXNativeTarget "GhibliTests" */;
 			buildPhases = (
-				BB2F633F2EB2B49900BB2FD9 /* Sources */,
-				BB2F63402EB2B49900BB2FD9 /* Frameworks */,
-				BB2F63412EB2B49900BB2FD9 /* Resources */,
+				BB82A3602EC1018000BD1D17 /* Sources */,
+				BB82A3612EC1018000BD1D17 /* Frameworks */,
+				BB82A3622EC1018000BD1D17 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				BB2F63452EB2B49900BB2FD9 /* PBXTargetDependency */,
+				BB82A3662EC1018000BD1D17 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
-				BB2F63462EB2B49900BB2FD9 /* GhibliTests */,
+				BB82A3672EC1018000BD1D17 /* GhibliTests */,
 			);
 			name = GhibliTests;
 			packageProductDependencies = (
 			);
 			productName = GhibliTests;
-			productReference = BB2F63432EB2B49900BB2FD9 /* GhibliTests.xctest */;
+			productReference = BB82A3642EC1018000BD1D17 /* GhibliTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		BB2F634C2EB2B49900BB2FD9 /* GhibliUITests */ = {
+		BB82A36D2EC1018000BD1D17 /* GhibliUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BB2F635D2EB2B49900BB2FD9 /* Build configuration list for PBXNativeTarget "GhibliUITests" */;
+			buildConfigurationList = BB82A37E2EC1018000BD1D17 /* Build configuration list for PBXNativeTarget "GhibliUITests" */;
 			buildPhases = (
-				BB2F63492EB2B49900BB2FD9 /* Sources */,
-				BB2F634A2EB2B49900BB2FD9 /* Frameworks */,
-				BB2F634B2EB2B49900BB2FD9 /* Resources */,
+				BB82A36A2EC1018000BD1D17 /* Sources */,
+				BB82A36B2EC1018000BD1D17 /* Frameworks */,
+				BB82A36C2EC1018000BD1D17 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				BB2F634F2EB2B49900BB2FD9 /* PBXTargetDependency */,
+				BB82A3702EC1018000BD1D17 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
-				BB2F63502EB2B49900BB2FD9 /* GhibliUITests */,
+				BB82A3712EC1018000BD1D17 /* GhibliUITests */,
 			);
 			name = GhibliUITests;
 			packageProductDependencies = (
 			);
 			productName = GhibliUITests;
-			productReference = BB2F634D2EB2B49900BB2FD9 /* GhibliUITests.xctest */;
+			productReference = BB82A36E2EC1018000BD1D17 /* GhibliUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		BB2F632E2EB2B49700BB2FD9 /* Project object */ = {
+		BB82A34F2EC1017F00BD1D17 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 2600;
+				LastSwiftUpdateCheck = 2610;
 				LastUpgradeCheck = 2610;
 				TargetAttributes = {
-					BB2F63352EB2B49700BB2FD9 = {
-						CreatedOnToolsVersion = 26.0.1;
+					BB82A3562EC1017F00BD1D17 = {
+						CreatedOnToolsVersion = 26.1;
 					};
-					BB2F63422EB2B49900BB2FD9 = {
-						CreatedOnToolsVersion = 26.0.1;
-						TestTargetID = BB2F63352EB2B49700BB2FD9;
+					BB82A3632EC1018000BD1D17 = {
+						CreatedOnToolsVersion = 26.1;
+						TestTargetID = BB82A3562EC1017F00BD1D17;
 					};
-					BB2F634C2EB2B49900BB2FD9 = {
-						CreatedOnToolsVersion = 26.0.1;
-						TestTargetID = BB2F63352EB2B49700BB2FD9;
+					BB82A36D2EC1018000BD1D17 = {
+						CreatedOnToolsVersion = 26.1;
+						TestTargetID = BB82A3562EC1017F00BD1D17;
 					};
 				};
 			};
-			buildConfigurationList = BB2F63312EB2B49700BB2FD9 /* Build configuration list for PBXProject "Ghibli" */;
+			buildConfigurationList = BB82A3522EC1017F00BD1D17 /* Build configuration list for PBXProject "Ghibli" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = BB2F632D2EB2B49700BB2FD9;
+			mainGroup = BB82A34E2EC1017F00BD1D17;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				BBB059BF2EC0BE0D00B4DEF4 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
-				BBB059C72EC0C04700B4DEF4 /* XCRemoteSwiftPackageReference "swift-tagged" */,
+				BB82A3E02EC1038700BD1D17 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+				BB82A3E32EC1039E00BD1D17 /* XCRemoteSwiftPackageReference "swift-tagged" */,
+				BB82A41B2EC10BB700BD1D17 /* XCRemoteSwiftPackageReference "Nuke" */,
 			);
 			preferredProjectObjectVersion = 77;
-			productRefGroup = BB2F63372EB2B49700BB2FD9 /* Products */;
+			productRefGroup = BB82A3582EC1017F00BD1D17 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				BB2F63352EB2B49700BB2FD9 /* Ghibli */,
-				BB2F63422EB2B49900BB2FD9 /* GhibliTests */,
-				BB2F634C2EB2B49900BB2FD9 /* GhibliUITests */,
+				BB82A3562EC1017F00BD1D17 /* Ghibli */,
+				BB82A3632EC1018000BD1D17 /* GhibliTests */,
+				BB82A36D2EC1018000BD1D17 /* GhibliUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		BB2F63342EB2B49700BB2FD9 /* Resources */ = {
+		BB82A3552EC1017F00BD1D17 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB82A3F02EC105FE00BD1D17 /* .editorconfig in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB82A3622EC1018000BD1D17 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BB2F63412EB2B49900BB2FD9 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BB2F634B2EB2B49900BB2FD9 /* Resources */ = {
+		BB82A36C2EC1018000BD1D17 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -245,21 +255,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		BB2F63322EB2B49700BB2FD9 /* Sources */ = {
+		BB82A3532EC1017F00BD1D17 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BB2F633F2EB2B49900BB2FD9 /* Sources */ = {
+		BB82A3602EC1018000BD1D17 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BB2F63492EB2B49900BB2FD9 /* Sources */ = {
+		BB82A36A2EC1018000BD1D17 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -269,20 +279,20 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		BB2F63452EB2B49900BB2FD9 /* PBXTargetDependency */ = {
+		BB82A3662EC1018000BD1D17 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = BB2F63352EB2B49700BB2FD9 /* Ghibli */;
-			targetProxy = BB2F63442EB2B49900BB2FD9 /* PBXContainerItemProxy */;
+			target = BB82A3562EC1017F00BD1D17 /* Ghibli */;
+			targetProxy = BB82A3652EC1018000BD1D17 /* PBXContainerItemProxy */;
 		};
-		BB2F634F2EB2B49900BB2FD9 /* PBXTargetDependency */ = {
+		BB82A3702EC1018000BD1D17 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = BB2F63352EB2B49700BB2FD9 /* Ghibli */;
-			targetProxy = BB2F634E2EB2B49900BB2FD9 /* PBXContainerItemProxy */;
+			target = BB82A3562EC1017F00BD1D17 /* Ghibli */;
+			targetProxy = BB82A36F2EC1018000BD1D17 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		BB2F63552EB2B49900BB2FD9 /* Debug */ = {
+		BB82A3762EC1018000BD1D17 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -334,19 +344,18 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.1;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
-				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
-		BB2F63562EB2B49900BB2FD9 /* Release */ = {
+		BB82A3772EC1018000BD1D17 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -392,28 +401,26 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.1;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
-				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		BB2F63582EB2B49900BB2FD9 /* Debug */ = {
+		BB82A3792EC1018000BD1D17 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "";
-				DEVELOPMENT_TEAM = 3GAU36V85Y;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Ghibli+";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -436,17 +443,16 @@
 			};
 			name = Debug;
 		};
-		BB2F63592EB2B49900BB2FD9 /* Release */ = {
+		BB82A37A2EC1018000BD1D17 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "";
-				DEVELOPMENT_TEAM = 3GAU36V85Y;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Ghibli+";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -469,15 +475,14 @@
 			};
 			name = Release;
 		};
-		BB2F635B2EB2B49900BB2FD9 /* Debug */ = {
+		BB82A37C2EC1018000BD1D17 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 3GAU36V85Y;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.1;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = io.jaroshevskii.GhibliTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -491,15 +496,14 @@
 			};
 			name = Debug;
 		};
-		BB2F635C2EB2B49900BB2FD9 /* Release */ = {
+		BB82A37D2EC1018000BD1D17 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 3GAU36V85Y;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.1;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = io.jaroshevskii.GhibliTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -513,12 +517,11 @@
 			};
 			name = Release;
 		};
-		BB2F635E2EB2B49900BB2FD9 /* Debug */ = {
+		BB82A37F2EC1018000BD1D17 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 3GAU36V85Y;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = io.jaroshevskii.GhibliUITests;
@@ -533,12 +536,11 @@
 			};
 			name = Debug;
 		};
-		BB2F635F2EB2B49900BB2FD9 /* Release */ = {
+		BB82A3802EC1018000BD1D17 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 3GAU36V85Y;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = io.jaroshevskii.GhibliUITests;
@@ -556,38 +558,38 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		BB2F63312EB2B49700BB2FD9 /* Build configuration list for PBXProject "Ghibli" */ = {
+		BB82A3522EC1017F00BD1D17 /* Build configuration list for PBXProject "Ghibli" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BB2F63552EB2B49900BB2FD9 /* Debug */,
-				BB2F63562EB2B49900BB2FD9 /* Release */,
+				BB82A3762EC1018000BD1D17 /* Debug */,
+				BB82A3772EC1018000BD1D17 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BB2F63572EB2B49900BB2FD9 /* Build configuration list for PBXNativeTarget "Ghibli" */ = {
+		BB82A3782EC1018000BD1D17 /* Build configuration list for PBXNativeTarget "Ghibli" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BB2F63582EB2B49900BB2FD9 /* Debug */,
-				BB2F63592EB2B49900BB2FD9 /* Release */,
+				BB82A3792EC1018000BD1D17 /* Debug */,
+				BB82A37A2EC1018000BD1D17 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BB2F635A2EB2B49900BB2FD9 /* Build configuration list for PBXNativeTarget "GhibliTests" */ = {
+		BB82A37B2EC1018000BD1D17 /* Build configuration list for PBXNativeTarget "GhibliTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BB2F635B2EB2B49900BB2FD9 /* Debug */,
-				BB2F635C2EB2B49900BB2FD9 /* Release */,
+				BB82A37C2EC1018000BD1D17 /* Debug */,
+				BB82A37D2EC1018000BD1D17 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BB2F635D2EB2B49900BB2FD9 /* Build configuration list for PBXNativeTarget "GhibliUITests" */ = {
+		BB82A37E2EC1018000BD1D17 /* Build configuration list for PBXNativeTarget "GhibliUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BB2F635E2EB2B49900BB2FD9 /* Debug */,
-				BB2F635F2EB2B49900BB2FD9 /* Release */,
+				BB82A37F2EC1018000BD1D17 /* Debug */,
+				BB82A3802EC1018000BD1D17 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -595,7 +597,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		BBB059BF2EC0BE0D00B4DEF4 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+		BB82A3E02EC1038700BD1D17 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture.git";
 			requirement = {
@@ -603,7 +605,7 @@
 				minimumVersion = 1.23.1;
 			};
 		};
-		BBB059C72EC0C04700B4DEF4 /* XCRemoteSwiftPackageReference "swift-tagged" */ = {
+		BB82A3E32EC1039E00BD1D17 /* XCRemoteSwiftPackageReference "swift-tagged" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/pointfreeco/swift-tagged.git";
 			requirement = {
@@ -611,20 +613,33 @@
 				minimumVersion = 0.10.0;
 			};
 		};
+		BB82A41B2EC10BB700BD1D17 /* XCRemoteSwiftPackageReference "Nuke" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kean/Nuke";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 12.8.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		BBB059C02EC0BE0D00B4DEF4 /* ComposableArchitecture */ = {
+		BB82A3E12EC1038700BD1D17 /* ComposableArchitecture */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = BBB059BF2EC0BE0D00B4DEF4 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			package = BB82A3E02EC1038700BD1D17 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
 			productName = ComposableArchitecture;
 		};
-		BBB059C82EC0C04700B4DEF4 /* Tagged */ = {
+		BB82A3E42EC1039E00BD1D17 /* Tagged */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = BBB059C72EC0C04700B4DEF4 /* XCRemoteSwiftPackageReference "swift-tagged" */;
+			package = BB82A3E32EC1039E00BD1D17 /* XCRemoteSwiftPackageReference "swift-tagged" */;
 			productName = Tagged;
+		};
+		BB82A41C2EC10BB700BD1D17 /* NukeUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BB82A41B2EC10BB700BD1D17 /* XCRemoteSwiftPackageReference "Nuke" */;
+			productName = NukeUI;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
-	rootObject = BB2F632E2EB2B49700BB2FD9 /* Project object */;
+	rootObject = BB82A34F2EC1017F00BD1D17 /* Project object */;
 }

@@ -9,7 +9,7 @@ import Foundation
 import Tagged
 import IdentifiedCollections
 
-struct Film: Identifiable, Equatable {
+struct Film: Identifiable, Equatable, Decodable {
   let id: ID
   let title: String
   let description: String
@@ -18,6 +18,12 @@ struct Film: Identifiable, Equatable {
   let releaseDate: String
         
   typealias ID = Tagged<Self, UUID>
+  
+  enum CodingKeys: String, CodingKey {
+    case id, title, description, director
+    case imageURL = "image"
+    case releaseDate = "release_date"
+  }
 }
 
 extension Film {

@@ -7,17 +7,20 @@
 
 import ComposableArchitecture
 import SwiftUI
+import NukeUI
 
 @Reducer
 struct FilmsList {
   @ObservableState
   struct State: Equatable {
-    @Shared(.films) var films: IdentifiedArrayOf<Film> = []
+    @Shared(.films) var films: IdentifiedArrayOf<Film>
+    @Shared(.favoritesIDs) var favorites: Set<Film.ID>
   }
   
   enum Action {
     case task
     case filmsResponse(Result<IdentifiedArrayOf<Film>, any Error>)
+    case toggleFavorite(Film.ID)
   }
   
   @Dependency(\.ghibli) var ghibli
@@ -36,6 +39,16 @@ struct FilmsList {
       
       case .filmsResponse:
         return .none
+        
+      case let .toggleFavorite(filmID):
+        state.$favorites.withLock {
+          if $0.contains(filmID) {
+            $0.remove(filmID)
+          } else {
+            $0.insert(filmID)
+          }
+        }
+        return .none
       }
     }
   }
@@ -46,10 +59,16 @@ struct FilmsListView: View {
   
   var body: some View {
     List(store.films) { film in
-      FilmCardView(film: film)
+      NavigationLink(state: Films.Path.State.detail) {
+        FilmCardView(
+          film: film,
+          isFavorite: store.favorites.contains(film.id),
+          onToggleFavorite: { store.send(.toggleFavorite(film.id)) }
+        )
+      }
     }
     .task { await store.send(.task).finish() }
-    .navigationTitle("Ghibli")
+    .navigationTitle("Ghibli Films")
   }
 }
 
@@ -65,10 +84,12 @@ struct FilmsListView: View {
 
 fileprivate struct FilmCardView: View {
   let film: Film
+  let isFavorite: Bool
+  let onToggleFavorite: () -> Void
   
   var body: some View {
     HStack(alignment: .top) {
-      FilmImageView(urlPath: film.imageURL.absoluteString)
+      FilmImageView(imageURL: film.imageURL)
         .frame(width: 100, height: 150)
       
       VStack(alignment: .leading) {
@@ -77,29 +98,52 @@ fileprivate struct FilmCardView: View {
             .bold()
           
           Spacer()
-//          FavoriteButton(filmID: film.id,
-//                         favoritesViewModel: favoritesViewModel)
+          
+          Button {
+            onToggleFavorite()
+          } label: {
+            Image(systemName: isFavorite ? "heart.fill" : "heart")
+              .foregroundStyle(isFavorite ? .pink : .gray)
+          }
           .buttonStyle(.plain)
-          .controlSize(.large)
         }
-        .padding(.bottom, 5)
+        .padding(.bottom, 4)
         
         Text("Directed by \(film.director)")
           .font(.subheadline)
           .foregroundColor(.secondary)
         
-        Text("Released: \(film.releaseDate)")
+        Text("Released \(film.releaseDate)")
           .font(.caption)
           .foregroundColor(.secondary)
       }
-      .padding(.top)
+      .padding(.vertical)
     }
   }
 }
 
+fileprivate struct FilmImageView: View {
+  let imageURL: URL?
+  
+  var body: some View {
+    LazyImage(url: imageURL, transaction: Transaction(animation: .default)) { state in
+      if let image = state.image {
+        image.resizable()
+      } else {
+        Color.gray
+      }
+    }
+  }
+}
 
-extension SharedReaderKey where Self == InMemoryKey<IdentifiedArrayOf<Film>> {
+extension SharedReaderKey where Self == InMemoryKey<IdentifiedArrayOf<Film>>.Default {
   static var films: Self {
-    inMemory("films")
+    Self[.inMemory("Films"), default: []]
+  }
+}
+
+extension SharedReaderKey where Self == AppStorageKey<Set<Film.ID>>.Default {
+  static var favoritesIDs: Self {
+    Self[.appStorage("FavoritesIDs"), default: []]
   }
 }
