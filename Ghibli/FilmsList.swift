@@ -113,7 +113,7 @@ fileprivate struct FilmCardView: View {
           .font(.subheadline)
           .foregroundColor(.secondary)
         
-        Text("Released \(film.releaseDate)")
+        Text("Released in \(film.releaseDate)")
           .font(.caption)
           .foregroundColor(.secondary)
       }
